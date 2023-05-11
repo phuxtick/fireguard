@@ -1,3 +1,6 @@
+#!/opt/fireguard/venv/bin/python3
+
+
 import socket, re, uuid
 from sys import platform
 from netifaces import (
@@ -28,6 +31,6 @@ class HostScan():
             "ipaddr": ip_list[0],
             "tags": tags
         }
-        print(h_data)
+        return h_data
 
 HostScan.localhost(hostname = socket.gethostname())
