@@ -13,13 +13,13 @@ class DiskScan():
         tags = []
         data = {}
 
-        for name,dtype,total,used,mount in zip_longest(kname[1:],TYPE[1:],total_size[1:],used_size[1:],mountpoint[1:-1]):
+        for name,dtype,total,used,mountpoint in zip_longest(kname[1:],TYPE[1:],total_size[1:],used_size[1:],mountpoint[1:-1]):
             data.update({
                 "name": name,
                 "hostname": hostname,
                 "d_type": dtype,
                 "total_size": total,
-                "mountpoint": mount,
+                "mountpoint": mountpoint,
                 "tags": tags
             })
         print(data)
