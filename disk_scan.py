@@ -22,6 +22,6 @@ class DiskScan():
                 "mountpoint": mountpoint,
                 "tags": tags
             })
-        print(data)
+            print(data)
 
 DiskScan.localdisk(hostname = socket.gethostname())
